@@ -1,3 +1,4 @@
-# C와 C++ 파일 업로드
-*.c
-*.cpp
+# Ignore all files except .c and .cpp extensions
+*
+!*.c
+!*.cpp
