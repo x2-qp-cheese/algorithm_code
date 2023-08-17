@@ -7,8 +7,8 @@ int main(){
     int x, y;
     int xmin=100000;
     int ymin=100000;
-    int xmax=1;
-    int ymax=1;
+    int xmax=-100000;
+    int ymax=-100000;
     for (int i = 0; i < n; i++){
         cin >> x >> y;
         if (x > xmax)
