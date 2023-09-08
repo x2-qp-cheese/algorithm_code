@@ -16,8 +16,6 @@ int main(){
         a.push_back(num);
     }
     sort(a.begin(), a.end());
-
     result = a[0]*a[n-1];
-
     cout << result;   
 }
