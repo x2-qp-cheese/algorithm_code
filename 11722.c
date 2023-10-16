@@ -6,36 +6,33 @@ int main()
     scanf("%d", &n);
     int arr[n];
     int res[n];
-    int count = 1;
+    int tmpmax;
+    int count;
     int max = 1;
-    int tmpmax = 0;
 
     for (int i = 0; i < n; i++)
     {
         scanf("%d", &arr[i]);
     }
 
-    res[n - 1] = 1;
+    res[0] = 1;
 
-    for (int i = n - 1; i >= 0; i--)
+    for (int i = 1; i < n; i++)
     {
+        count = 0;
         tmpmax = 1;
-        count = 1;
-        for (int j = i + 1; j < n; j++)
+        for (int j = i - 1; j >= 0; j--)
         {
-            if (arr[i] < arr[j])
+            if (arr[j] > arr[i])
             {
                 count = res[j] + 1;
             }
+
             if (tmpmax < count)
-            {
                 tmpmax = count;
-            }
         }
-        if (tmpmax > max)
-        {
+        if (max < tmpmax)
             max = tmpmax;
-        }
         res[i] = tmpmax;
     }
 
