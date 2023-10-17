@@ -9,7 +9,7 @@ int main()
     int s = 0;
     int l = 0;
     int len = 0;
-    int minlen = n;
+    int minlen = n + 1;
     int sum = 0;
 
     for (int i = 0; i < n; i++)
@@ -46,7 +46,7 @@ int main()
         }
         sum -= arr[s++];
     }
-    if (minlen != n)
+    if (minlen != n + 1)
         printf("%d", minlen);
     else
         printf("0");
